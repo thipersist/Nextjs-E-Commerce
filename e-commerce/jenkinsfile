@@ -1,0 +1,34 @@
+pipeline {
+  agent {
+    lable 'jenkins-agent'
+  }
+  tool {
+    jdk 'java17'
+    mave 'Maven3'
+  }
+  Stages {
+    stage('Clean up workspace'){
+      steps{
+        cleanWs()
+      }
+    }
+
+    stage('Checkout from SCM'){
+      steps{
+        git branch: 'main', credentialsId: 'github', url: 'git@github.com:thipersist/Nextjs-E-Commerce.git'
+      }
+    }
+
+    stage('Build Application'){
+      steps{
+        sh "mvn clean package"
+      }
+    }
+
+    stage('Test Application'){
+      steps{
+        sh "mvn test"
+      }
+    }
+  }
+}
