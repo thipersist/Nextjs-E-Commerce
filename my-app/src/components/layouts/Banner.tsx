@@ -1,4 +1,4 @@
-import { ArrowRight2} from "iconsax-react";
+import { ArrowRight2 } from "iconsax-react";
 import Image from "next/image";
 
 export default function Banner(){
