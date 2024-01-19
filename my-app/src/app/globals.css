@@ -5,3 +5,8 @@
 body {
   background-image:linear-gradient(to right,#74ebd5,#acb6e5);
 }
+
+section.banner {
+  @apply grid;
+  grid-template-columns: .4fr .6fr;
+}
