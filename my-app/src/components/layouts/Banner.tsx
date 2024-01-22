@@ -29,7 +29,15 @@ export default function Banner(){
                 </div>
             </div>
             <div className="relative">
-                <Image src={'/icon-bn.png'} fill style={{objectFit: "contain"}} alt="Icon_Banner_Coffee" />
+                <Image 
+                    src={'/icon-bn.png'} 
+                    fill 
+                    style={{objectFit: "contain"}} 
+                    alt="Icon_Banner_Coffee" 
+                    placeholder="blur"
+                    blurDataURL={'/icon-bn.png'}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
             </div>
         </section>
     )
