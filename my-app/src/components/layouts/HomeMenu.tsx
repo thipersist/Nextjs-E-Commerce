@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
+import ProdMenuItem from "../menu/ProdMenuItem";
 
 export default function HomeMenu(){
     return(
@@ -35,32 +36,10 @@ export default function HomeMenu(){
                 </h2>
             </div>
             <div className="grid grid-cols-4 gap-4">
-                <div className="
-                    backdrop-blur-sm 
-                    bg-white/35 
-                    p-4 
-                    rounded-lg 
-                    text-center 
-                    shadow-lg 
-                    hover:shadow-2xl 
-                    hover:-translate-y-6 duration-500 
-                    hover: backdrop:blur-3xl hover:bg-white/95
-                ">
-                    <img
-                        src="/capuchinu.png" 
-                        alt="capuchinu" 
-                    />
-                    <h4 className="tex-xl font-semibold my-2">
-                        Capuchinu Coffee
-                    </h4>
-                    <p className="text-sm text-gray-500">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Nam, magnam molestias aperiam impedit iure libero ab voluptatem culpa ipsam unde explicabo
-                    </p>
-                    <button className="mt-4 bg-primary text-white rounded-full px-8 py-2">
-                        Add to cart 2$
-                    </button>
-                </div>
+                <ProdMenuItem />
+                <ProdMenuItem />
+                <ProdMenuItem />
+                <ProdMenuItem />
             </div>
         </section>
     )
