@@ -3,25 +3,26 @@ import Image from "next/image";
 export default function HomeMenu(){
     return(
         <section>
-            <div className="absolute left-0 right-0 w-full">
-                <div className="absolute h-48 w-48 left-0 -z-10">
+            <div className="absolute left-0 right-0 w-full items-center">
+                <div className="absolute left-0 -z-10">
                     <Image 
-                        src={'/cf-bn-l.png'} 
-                        fill 
+                        src={'/bn-l-2.png'} 
+                        width={207}
+                        height={305}
                         style={{objectFit:'contain'}} 
                         alt="banner_left"
                         priority={false} 
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                 </div>
-                <div className="absolute h-48 w-48 right-0 -z-10">
+                <div className="absolute right-0 -z-10">
                     <Image 
-                        src={'/cf-bn-r.png'} 
-                        fill 
+                        src={'/bn-r.png'} 
+                        width={207}
+                        height={305} 
                         style={{objectFit:'contain'}} 
                         alt="banner_right"
                         priority={false} 
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        sizes="(max-width: auto), (max-heght: auto)"
                     />
                 </div>
             </div>
@@ -34,12 +35,21 @@ export default function HomeMenu(){
                 </h2>
             </div>
             <div className="grid grid-cols-4 gap-4">
-                <div className="bg-gray-300 p-4 rounded-lg">
-                    <Image
-                        src={'/capuchinu.png'} 
-                        fill
+                <div className="bg-gray-200 p-4 rounded-lg text-center ">
+                    <img
+                        src="/capuchinu.png" 
                         alt="capuchinu" 
                     />
+                    <h4 className="tex-xl font-semibold my-2">
+                        Capuchinu Coffee
+                    </h4>
+                    <p className="text-sm text-gray-500">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Nam, magnam molestias aperiam impedit iure libero ab voluptatem culpa ipsam unde explicabo
+                    </p>
+                    <button className="mt-4 bg-primary text-white rounded-full px-8 py-2">
+                        Add to cart 2$
+                    </button>
                 </div>
             </div>
         </section>
