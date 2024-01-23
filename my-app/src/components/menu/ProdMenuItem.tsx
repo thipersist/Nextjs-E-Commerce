@@ -7,20 +7,23 @@ export default function ProdMenuItem(){
                     rounded-lg 
                     text-center 
                     shadow-lg 
-                    hover:shadow-2xl 
+                    transition-all
+                    hover:shadow-black/30 
                     hover:-translate-y-5 duration-500 
                     hover: backdrop:blur-3xl hover:bg-white/95
                 ">
-                    <img
-                        src="/capuchinu.png" 
-                        alt="capuchinu" 
-                    />
+                    <div className="text-center">
+                        <img
+                            src="/capuchinu.png" 
+                            alt="capuchinu"
+                            className="m-h-auto max-h-28 block mx-auto" 
+                        />
+                    </div>
                     <h4 className="tex-xl font-semibold my-2">
                         Capuchinu Coffee
                     </h4>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm text-gray-500 font-semibold">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Nam, magnam molestias aperiam impedit iure libero ab voluptatem culpa ipsam unde explicabo
                     </p>
                     <button className="mt-4 bg-primary text-white rounded-full px-8 py-2">
                         Add to cart 2$
