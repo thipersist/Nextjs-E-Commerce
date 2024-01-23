@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import ProdMenuItem from "../menu/ProdMenuItem";
+import SectionHeader from "./SectionHeader";
 
 export default function HomeMenu(){
     return(
@@ -27,15 +28,11 @@ export default function HomeMenu(){
                     />
                 </div>
             </div>
-            <div className="text-center mb-4">
-                <h3 className="uppercase text-gray-500 font-semibold leading-4">
-                    Check out
-                </h3>
-                <h2 className="text-primary italic font-bold text-4xl">
-                    Menu
-                </h2>
-            </div>
-            <div className="grid grid-cols-4 gap-4">
+            <SectionHeader 
+                mainHeader={"Check Out"}
+                subHeader={"Menu"}
+            />
+            <div className="grid grid-cols-4 gap-4 my-12">
                 <ProdMenuItem />
                 <ProdMenuItem />
                 <ProdMenuItem />
