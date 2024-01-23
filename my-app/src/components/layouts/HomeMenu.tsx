@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 
 export default function HomeMenu(){
@@ -7,9 +8,9 @@ export default function HomeMenu(){
                 <div className="absolute left-0 -z-10">
                     <Image 
                         src={'/bn-l-2.png'} 
-                        width={207}
-                        height={305}
-                        style={{objectFit:'contain'}} 
+                        width={150}
+                        height={195}
+                        style={{objectFit:'contain', width: 'auto', height: 'auto'}} 
                         alt="banner_left"
                         priority={false} 
                     />
@@ -17,12 +18,11 @@ export default function HomeMenu(){
                 <div className="absolute right-0 -z-10">
                     <Image 
                         src={'/bn-r.png'} 
-                        width={207}
-                        height={305} 
-                        style={{objectFit:'contain'}} 
+                        width={150}
+                        height={195} 
+                        style={{objectFit:'contain', width: 'auto', height: 'auto'}} 
                         alt="banner_right"
                         priority={false} 
-                        sizes="(max-width: auto), (max-heght: auto)"
                     />
                 </div>
             </div>
@@ -35,7 +35,17 @@ export default function HomeMenu(){
                 </h2>
             </div>
             <div className="grid grid-cols-4 gap-4">
-                <div className="bg-gray-200 p-4 rounded-lg text-center ">
+                <div className="
+                    backdrop-blur-sm 
+                    bg-white/35 
+                    p-4 
+                    rounded-lg 
+                    text-center 
+                    shadow-lg 
+                    hover:shadow-2xl 
+                    hover:-translate-y-6 duration-500 
+                    hover: backdrop:blur-3xl hover:bg-white/95
+                ">
                     <img
                         src="/capuchinu.png" 
                         alt="capuchinu" 
