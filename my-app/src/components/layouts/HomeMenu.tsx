@@ -37,6 +37,10 @@ export default function HomeMenu(){
                 <ProdMenuItem />
                 <ProdMenuItem />
                 <ProdMenuItem />
+                <ProdMenuItem />
+                <ProdMenuItem />
+                <ProdMenuItem />
+                <ProdMenuItem />
             </div>
         </section>
     )
