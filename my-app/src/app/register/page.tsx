@@ -5,25 +5,25 @@ export default function RegisterPage(){
                 Register
             </h1>
             <div className="
+                container
                 relative 
-                z-[1000] 
-                shadow-xl 
+                shadow-2xl
                 rounded-3xl 
                 w-[350px]
-                h-[340px]
+                h-[500px]
                 mx-auto 
                 flex 
                 justify-center 
                 items-center 
                 overflow-hidden">
-                <div className="container absolute inset-2 rounded-3xl overflow-hidden">
-                    {/* <form className="text-center font-semibold">
+                <div className="absolute inset-[5px] bg-gradient-to-r from-[#74ebd5] to-[#acb6e5] rounded-3xl z-[1000]">
+                    <form className="text-center font-semibold">
                         <input type="username" placeholder="username"/>
                         <input type="email" placeholder="email"/>
                         <input type="password" placeholder="password"/>
                         <input type="password" placeholder="confirm password"/>
                         <button className="submit">Register</button>
-                    </form> */}
+                    </form>
                 </div>     
             </div>
         </section>
