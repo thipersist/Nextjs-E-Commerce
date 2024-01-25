@@ -4,9 +4,9 @@ export default function RegisterPage(){
             <h1 className="text-center text-primary text-4xl">
                 Register
             </h1>
-            <div className="absolute mx-auto items-center">
-                <div className="relative w-[350px] h-[340px] rounded-3xl shadow-2xl">
-                    <form>
+            <div className="container relative rounded-3xl w-[350px] h-[500px] flex justify-center items-center bg-black/35 p-5">
+                <div className="p-4 mx-auto shadow-2xl">
+                    <form className="text-center font-semibold">
                         <input type="username" placeholder="username"/>
                         <input type="email" placeholder="email"/>
                         <input type="password" placeholder="password"/>

@@ -15,5 +15,12 @@ input[type="username"],
 input[type="email"],
 input[type="password"] {
   @apply block w-full my-4 rounded-xl;
-  @apply border p-2 border-gray-300 bg-gray-200;
+  @apply p-2 border-gray-300 bg-gray-200 border-none;
 }
+
+.container::before {
+  @apply content-[""] absolute bg-[conic-gradient(transparent,transparent,transparent,#d400d4)] h-[650px] w-[650px] animate-bounce
+}
+/* .container::after{
+  @apply
+} */
