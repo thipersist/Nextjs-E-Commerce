@@ -11,6 +11,20 @@ const config: Config = {
       colors: {
         primary: '#f13a01'
       },
+      keyframes: {
+        rotate: {
+          "0%": {
+            transform: "rotate(0)"
+          },
+          "100%" : {
+            transform: "rotate(360deg)"
+          }
+        }
+      },
+      animation: {
+        animationBefore: "spin 4s -2s linear infinite",
+        animationAfter: "spin 4s linear infinite",
+      }
     },
   },
   plugins: [],

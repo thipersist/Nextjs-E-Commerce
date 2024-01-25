@@ -4,15 +4,26 @@ export default function RegisterPage(){
             <h1 className="text-center text-primary text-4xl">
                 Register
             </h1>
-            <div className="container relative rounded-3xl w-[350px] h-[500px] flex justify-center items-center bg-black/35 p-5">
-                <div className="p-4 mx-auto shadow-2xl">
-                    <form className="text-center font-semibold">
+            <div className="
+                relative 
+                z-[1000] 
+                shadow-xl 
+                rounded-3xl 
+                w-[350px]
+                h-[340px]
+                mx-auto 
+                flex 
+                justify-center 
+                items-center 
+                overflow-hidden">
+                <div className="container absolute inset-2 rounded-3xl overflow-hidden">
+                    {/* <form className="text-center font-semibold">
                         <input type="username" placeholder="username"/>
                         <input type="email" placeholder="email"/>
                         <input type="password" placeholder="password"/>
                         <input type="password" placeholder="confirm password"/>
                         <button className="submit">Register</button>
-                    </form>
+                    </form> */}
                 </div>     
             </div>
         </section>

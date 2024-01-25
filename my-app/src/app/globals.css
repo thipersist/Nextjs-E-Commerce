@@ -18,9 +18,9 @@ input[type="password"] {
   @apply p-2 border-gray-300 bg-gray-200 border-none;
 }
 
-.container::before {
-  @apply content-[""] absolute bg-[conic-gradient(transparent,transparent,transparent,#d400d4)] h-[650px] w-[650px] animate-bounce
-}
+/* .container::before {
+  @apply content-[""] absolute inset-1 bg-gradient-to-r from-[#74ebd5] to-[#acb6e5] bg-cover bg-center blur-sm;
+} */
 /* .container::after{
-  @apply
+  @apply content-[""] absolute bg-[conic-gradient(transparent,transparent,transparent,#00cf00)];
 } */
