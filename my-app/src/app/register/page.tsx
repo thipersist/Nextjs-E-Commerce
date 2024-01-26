@@ -1,4 +1,5 @@
-import { Google, Xrp } from "iconsax-react";
+import { Google } from "iconsax-react";
+import Image from "next/image";
 
 export default function RegisterPage(){
     return (
@@ -11,14 +12,23 @@ export default function RegisterPage(){
                 relative 
                 shadow-2xl
                 rounded-3xl 
-                w-[350px]
+                w-[700px]
                 h-[500px]
                 mx-auto 
                 flex 
-                justify-center 
+                justify-center
                 items-center 
                 overflow-hidden">
-                <div className="absolute inset-[5px] bg-gradient-to-r from-[#74ebd5] to-[#acb6e5] rounded-3xl z-[1000] font-semibold">
+                <div className="
+                    absolute 
+                    inset-[5px] 
+                    bg-gradient-to-r from-[#74ebd5] to-[#acb6e5] 
+                    rounded-3xl 
+                    z-[1000] 
+                    font-semibold flex justify-between">
+                    <div className="" >
+                        <Image src={'/tea-auth.png'} alt="tea-auth-bg" fill style={{objectFit:"contain"}} />  
+                    </div>
                     <form className="text-center max-w-xs mx-auto">
                         <input type="username" placeholder="username"/>
                         <input type="email" placeholder="email"/>

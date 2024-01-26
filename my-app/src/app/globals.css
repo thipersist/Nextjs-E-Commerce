@@ -19,10 +19,10 @@ input[type="password"] {
 }
 
 .container::before {
-  @apply content-[""] absolute bg-[conic-gradient(transparent,transparent,transparent,#d400d4)] h-[650px] w-[650px];
+  @apply content-[""] absolute bg-[conic-gradient(transparent,transparent,transparent,#d400d4)] h-[1300px] w-[1300px];
   @apply animate-animationBefore;
 }
 .container::after{
-  @apply content-[""] absolute bg-[conic-gradient(transparent,transparent,transparent,#00cf00)] h-[650px] w-[650px];
+  @apply content-[""] absolute bg-[conic-gradient(transparent,transparent,transparent,#00cf00)] h-[1300px] w-[1300px];
   @apply animate-animationAfter;
 }
