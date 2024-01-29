@@ -35,12 +35,12 @@ export default function RegisterPage(){
                 justify-center 
                 items-center 
                 overflow-hidden">
-                <div className="absolute inset-[5px] bg-gradient-to-r from-[#74ebd5] to-[#acb6e5] rounded-3xl z-[1000] font-semibold">
+                <div className="absolute inset-[5px] bg-gradient-to-r from-[#74ebd5] to-[#acb6e5] rounded-3xl z-[1000]">
                     <form className="text-center max-w-xs mx-auto" onSubmit={handleOnSubmit}>
-                        <input type="username" placeholder="username" value={username} onChange={ev => setUserName(ev.target.value)}/>
+                        <input type="username" placeholder="username" value={username} onChange={ev => setUserName(ev.target.value)} required />
                         <input type="email" placeholder="email" value={email} onChange={ev => setEmail(ev.target.value)}/>
-                        <input type="password" placeholder="password" value={password} onChange={ev => setPasword(ev.target.value)}/>
-                        <input type="password" placeholder="confirm password" value={passwordConfirm} onChange={ev => setPaswordConfirm(ev.target.value)}/>
+                        <input type="password" placeholder="password" value={password} onChange={ev => setPasword(ev.target.value)} required/>
+                        <input type="password" placeholder="confirm password" value={passwordConfirm} onChange={ev => setPaswordConfirm(ev.target.value)} required/>
                         <button type="submit" className="bg-primary text-white shadow-sm backdrop:shadow-md w-full rounded-full p-2">Register</button>
                         <div className="text-gray-500 my-4">
                             or login with provider
