@@ -1,7 +1,6 @@
 "use client";
 import React, { FC, useState } from "react";
 import { Google } from "iconsax-react";
-import { json } from "stream/consumers";
 
 export default function RegisterPage(){
     const [username, setUserName] = useState('');
