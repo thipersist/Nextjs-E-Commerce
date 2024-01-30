@@ -11,6 +11,7 @@
   "dependencies": {
     "dotenv": "^16.3.1",
     "iconsax-react": "^0.0.8",
+    "mongoose": "^8.1.1",
     "next": "14.1.0",
     "next-auth": "^4.24.5",
     "react": "^18",
