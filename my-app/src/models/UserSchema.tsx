@@ -24,12 +24,19 @@ const UserSchema =  new Schema({
     passwordConfirm: {
         type: String,
         required: true,
-        validate: (passConfirm: string) => {
-            if(!passConfirm?.length || passConfirm.length < 5 ){
+        validate: (passConfirm: string, password: string) => {
+            if(!passConfirm?.length || passConfirm.length < 5){
                 new Error ('Password must be at least 5 characters')
+            } else if(passConfirm !== password){
+                new Error ('Pass confirm not match password')
             }
         }
     }
 }, {timestamps: true})
+
+UserSchema.post('validate', function(users){
+    const pass = users.password;
+    
+})
 
 export const Users = models?.Users || model('Users', UserSchema);
