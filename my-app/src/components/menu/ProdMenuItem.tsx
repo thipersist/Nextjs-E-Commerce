@@ -9,7 +9,7 @@ export default function ProdMenuItem(){
                     shadow-lg 
                     transition-all
                     hover:shadow-black/30 
-                    hover:-translate-y-5 duration-500 
+                    hover:-translate-y-3 duration-500 
                     hover: backdrop:blur-3xl hover:bg-white/95
                 ">
                     <div className="text-center">
