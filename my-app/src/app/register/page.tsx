@@ -8,14 +8,25 @@ export default function RegisterPage(){
     const [password, setPasword] = useState('');
     const [passwordConfirm, setPaswordConfirm] =  useState('');
 
+    const validatePass = () => {
+        return passwordConfirm ==  password
+    }
+
     function handleOnSubmit(ev:any) {
-        console.log(ev.target.value)
-        ev.preventDefault()
-        fetch('/api/register', {
-            method: 'POST',
-            body: JSON.stringify({username, email, password, passwordConfirm}),
-            headers: {'Content-Type':'application/json'},
-        });
+        try {
+                ev.preventDefault()
+                if(!validatePass()){
+                    throw new Error("loi")
+                }
+            fetch('/api/register', {
+                method: 'POST',
+                body: JSON.stringify({username, email, password, passwordConfirm}),
+                headers: {'Content-Type':'application/json'},
+            });
+        } catch (error) {
+            alert((error as Error).message)
+        }
+      
     }
 
     return (
@@ -45,7 +56,20 @@ export default function RegisterPage(){
                         <div className="text-gray-500 my-4">
                             or login with provider
                         </div>
-                        <button type="submit" className=" flex justify-center gap-2 items-center border border-primary p-2 rounded-full w-full text-primary">
+                        <button type="submit" className=" 
+                            flex 
+                            justify-center 
+                            gap-2 
+                            items-center 
+                            border 
+                            border-primary 
+                            p-2 
+                            rounded-full 
+                            w-full 
+                            text-primary
+                            hover:shadow-md
+                            hover:shadow-primary/50
+                            ">
                             <Google size="25" color="#FF8A65"/>
                             Login with google
                         </button>
