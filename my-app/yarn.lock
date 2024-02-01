@@ -5751,6 +5751,7 @@ streamsearch@^1.1.0:
   integrity sha512-Mcc5wHehp9aXz1ax6bZUyY5afg9u2rv5cqQI3mRrYkGC8rW2hM02jWuwjtL++LS5qinSyhj2QfLyNsuc+VsExg==
 
 "string-width-cjs@npm:string-width@^4.2.0", string-width@^4.1.0:
+  name string-width-cjs
   version "4.2.3"
   resolved "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
@@ -6318,7 +6319,7 @@ update-browserslist-db@^1.0.13:
 
 update@^0.7.4:
   version "0.7.4"
-  resolved "https://registry.npmjs.org/update/-/update-0.7.4.tgz"
+  resolved "https://registry.yarnpkg.com/update/-/update-0.7.4.tgz#b1a091c11a3e28ae31ba2eef58b711b82ce98b14"
   integrity sha512-B7HArWh4T6TSmMffmxlbD9gZM0QdboQ8N/p5aHcyhGCuuVRHSk37pvuQlAvi1XBrQMrEX5WJUQyQR8+jy/x4iQ==
   dependencies:
     arr-union "^3.1.0"
@@ -6353,7 +6354,7 @@ update@^0.7.4:
 
 upgrade@^1.1.0:
   version "1.1.0"
-  resolved "https://registry.npmjs.org/upgrade/-/upgrade-1.1.0.tgz"
+  resolved "https://registry.yarnpkg.com/upgrade/-/upgrade-1.1.0.tgz#4a50875ec5c715d19379799f0590a0e796958f61"
   integrity sha512-NtkVvqVCqsJo5U3mYRum2Tw6uCltOxfIJ/AfTZeTmw6U39IB5X23xF+kRZ9aiPaORqeiQQ7Q209/ibhOvxzwHA==
 
 upper-case@^1.1.1:

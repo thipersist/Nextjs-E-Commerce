@@ -9,6 +9,7 @@ export default function RegisterPage(){
     const [passwordConfirm, setPaswordConfirm] =  useState('');
 
     function handleOnSubmit(ev:any) {
+        console.log(ev.target.value)
         ev.preventDefault()
         fetch('/api/register', {
             method: 'POST',
