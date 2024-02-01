@@ -8,25 +8,24 @@ export default function RegisterPage(){
     const [password, setPasword] = useState('');
     const [passwordConfirm, setPaswordConfirm] =  useState('');
 
-    const validatePass = () => {
-        return passwordConfirm ==  password
-    }
 
     function handleOnSubmit(ev:any) {
         try {
                 ev.preventDefault()
-                if(!validatePass()){
-                    throw new Error("loi")
-                }
-            fetch('/api/register', {
-                method: 'POST',
-                body: JSON.stringify({username, email, password, passwordConfirm}),
-                headers: {'Content-Type':'application/json'},
-            });
+                if(!password?.length || password.length < 5){
+                    throw new Error ('Password must be at least 5 characters')
+                } else if (passwordConfirm !== password) {
+                    throw new Error('Password confirm not match')
+                } else {
+                    fetch('/api/register', {
+                    method: 'POST',
+                    body: JSON.stringify({username, email, password, passwordConfirm}),
+                    headers: {'Content-Type':'application/json'},
+                });
+            }
         } catch (error) {
             alert((error as Error).message)
         }
-      
     }
 
     return (
