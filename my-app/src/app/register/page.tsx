@@ -1,17 +1,20 @@
 "use client";
 import React, { FC, useState } from "react";
 import { Google, Message } from "iconsax-react";
+import Link from "next/link";
 
 export default function RegisterPage(){
     const [username, setUserName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPasword] = useState('');
     const [passwordConfirm, setPaswordConfirm] =  useState('');
+    const [creatingUser, setCreatingUser] = useState(false);
+    const [userCreated, setUserCreated] = useState(false);
 
-
-    function handleOnSubmit(ev:any) {
+    async function handleOnSubmit(ev:any) {
         try {
-                ev.preventDefault()
+            ev.preventDefault()
+            setCreatingUser(true);
                 if(!password?.length || password.length < 5){
                     throw new Error ('Password must be at least 5 characters')
                 } else if (passwordConfirm !== password) {
@@ -21,18 +24,25 @@ export default function RegisterPage(){
                     method: 'POST',
                     body: JSON.stringify({username, email, password, passwordConfirm}),
                     headers: {'Content-Type':'application/json'},
-                });
-            }
+                    });
+                }
+            setCreatingUser(true);
+            setUserCreated(true);
         } catch (error) {
             alert((error as Error).message)
         }
     }
 
     return (
-        <section className="mt-8">
-            <h1 className="text-center text-primary text-4xl my-8">
+        <section className="mt-8 text-center">
+            <h1 className="text-primary text-4xl my-8">
                 Register
             </h1>
+            {userCreated && (
+                <div className=" text-green-600 drop-shadow-lg font-semibold my-4 ">
+                    User created.<br/> Now you can <Link className="underline" href={'/login'}>Login &raquo;</Link>
+                </div>
+            )}
             <div className="
                 container
                 relative 
