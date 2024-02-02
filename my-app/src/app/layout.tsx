@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layouts/Header";
 import { Facebook, Google, Instagram, Xrp, Youtube } from "iconsax-react";
 
-const roboto = Roboto({ subsets: ["latin"], weight: ['300','500','700'] });
+const poppins = Poppins({ subsets: ["latin"], weight: ['300','500','700'] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
+      <body className={poppins.className}>
         <main className="max-w-6xl mx-auto p-4">
           <Header />
           {children}

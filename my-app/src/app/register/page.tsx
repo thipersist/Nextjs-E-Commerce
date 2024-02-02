@@ -10,6 +10,7 @@ export default function RegisterPage(){
     const [passwordConfirm, setPaswordConfirm] =  useState('');
     const [creatingUser, setCreatingUser] = useState(false);
     const [userCreated, setUserCreated] = useState(false);
+    const [error, setError] = useState(true)
 
     async function handleOnSubmit(ev:any) {
         try {
@@ -29,7 +30,7 @@ export default function RegisterPage(){
             setCreatingUser(true);
             setUserCreated(true);
         } catch (error) {
-            alert((error as Error).message)
+            setError(true)
         }
     }
 
@@ -39,8 +40,14 @@ export default function RegisterPage(){
                 Register
             </h1>
             {userCreated && (
-                <div className=" text-green-600 drop-shadow-lg font-semibold my-4 ">
+                <div className=" text-green-600 drop-shadow-lg my-4 ">
                     User created.<br/> Now you can <Link className="underline" href={'/login'}>Login &raquo;</Link>
+                </div>
+            )}
+            {error && (
+                <div className=" text-orange-500 drop-shadow-lg my-4 ">
+                    An error has occurred.<br />
+                    Please try again later
                 </div>
             )}
             <div className="
