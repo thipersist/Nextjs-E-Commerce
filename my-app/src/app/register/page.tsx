@@ -1,6 +1,6 @@
 "use client";
 import React, { FC, useState } from "react";
-import { Google } from "iconsax-react";
+import { Google, Message } from "iconsax-react";
 
 export default function RegisterPage(){
     const [username, setUserName] = useState('');
