@@ -10,7 +10,7 @@ export default function RegisterPage(){
     const [passwordConfirm, setPaswordConfirm] =  useState('');
     const [creatingUser, setCreatingUser] = useState(false);
     const [userCreated, setUserCreated] = useState(false);
-    const [error, setError] = useState(true)
+    const [error, setError] = useState(false)
 
     async function handleOnSubmit(ev:any) {
         try {
@@ -68,7 +68,17 @@ export default function RegisterPage(){
                         <input type="email" placeholder="email" value={email} onChange={ev => setEmail(ev.target.value)}/>
                         <input type="password" placeholder="password" value={password} onChange={ev => setPasword(ev.target.value)} required/>
                         <input type="password" placeholder="confirm password" value={passwordConfirm} onChange={ev => setPaswordConfirm(ev.target.value)} required/>
-                        <button type="submit" className="bg-primary text-white shadow-sm backdrop:shadow-md w-full rounded-full p-2">Register</button>
+                        <button type="submit" className="
+                            bg-primary
+                            text-white
+                            w-full
+                            rounded-full
+                            p-2
+                            hover:shadow-md
+                            hover:shadow-black/45
+                        ">
+                            Register
+                        </button>
                         <div className="text-gray-500 my-4">
                             or login with provider
                         </div>
@@ -86,7 +96,7 @@ export default function RegisterPage(){
                             hover:shadow-md
                             hover:shadow-primary/50
                             ">
-                            <Google size="25" color="#FF8A65"/>
+                            <Google size="24" color="#FF8A65"/>
                             Login with google
                         </button>
                     </form>
