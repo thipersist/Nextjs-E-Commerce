@@ -5,9 +5,7 @@ import { useState } from "react";
 
 export default function LoginPage() {
     const [username, setUserName] = useState('');
-    const [email, setEmail] = useState('');
     const [password, setPasword] = useState('');
-    const [passwordConfirm, setPaswordConfirm] = useState('');
     const [loginInProgress, setLoginInProgress] = useState(false);
     const [error, setError] = useState(false)
 
@@ -15,7 +13,7 @@ export default function LoginPage() {
         ev.preventDefault();
         setLoginInProgress(true);
         const { ok } = await fetch('/login/auth', {
-            body: JSON.stringify({ username, email, password }),
+            body: JSON.stringify({ username, password }),
             headers: { 'Content-Type': 'application/json' },
             method: 'POST',
         })
@@ -54,6 +52,7 @@ export default function LoginPage() {
                     <form className="text-center max-w-xs mx-auto" method="POST" action="/api/auth">
                         <input
                             type="username"
+                            name="username"
                             placeholder="username or email"
                             disabled={loginInProgress}
                             value={username}
@@ -61,38 +60,44 @@ export default function LoginPage() {
                             required />
                         <input
                             type="password"
+                            name="password"
                             placeholder="password"
                             disabled={loginInProgress}
                             value={password}
                             onChange={ev => setPasword(ev.target.value)}
                             required /> 
-                        <button type="submit" className="
-                            bg-primary
-                            text-white
-                            w-full
-                            rounded-full
-                            p-2
-                            hover:shadow-md
-                            hover:shadow-black/45
-                        ">
+                        <button
+                            disabled={loginInProgress}
+                            type="submit"
+                            className="
+                                bg-primary
+                                text-white
+                                w-full
+                                rounded-full
+                                p-2
+                                hover:shadow-md
+                                hover:shadow-black/45
+                            ">
                             Sign In
                         </button>
                         <div className="text-gray-500 my-4">
                             or login with provider
                         </div>
-                        <button type="submit" className=" 
-                            flex 
-                            justify-center 
-                            gap-2 
-                            items-center 
-                            border 
-                            border-primary 
-                            p-2 
-                            rounded-full 
-                            w-full 
-                            text-primary
-                            hover:shadow-md
-                            hover:shadow-primary/50
+                        <button
+                            type="submit"
+                            className=" 
+                                flex 
+                                justify-center 
+                                gap-2 
+                                items-center 
+                                border 
+                                border-primary 
+                                p-2 
+                                rounded-full 
+                                w-full 
+                                text-primary
+                                hover:shadow-md
+                                hover:shadow-primary/50
                             ">
                             <Google size="24" color="#FF8A65"/>
                             Login with google
