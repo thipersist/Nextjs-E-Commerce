@@ -1,6 +1,6 @@
 "use client"
 import { Google } from "iconsax-react";
-import Link from "next/link";
+import { signIn } from "next-auth/react";
 import { useState } from "react";
 
 export default function LoginPage() {
@@ -12,16 +12,7 @@ export default function LoginPage() {
     async function handleOnSubmit(ev:any) {
         ev.preventDefault();
         setLoginInProgress(true);
-        const { ok } = await fetch('/login/auth', {
-            body: JSON.stringify({ username, password }),
-            headers: { 'Content-Type': 'application/json' },
-            method: 'POST',
-        })
-        if (ok) {
-            
-        } else {
-
-        }
+        await signIn('credentials', {username, password});
         setLoginInProgress(false)
     }
 
@@ -49,7 +40,7 @@ export default function LoginPage() {
                 items-center 
                 overflow-hidden">
                 <div className="absolute inset-[5px] bg-gradient-to-r from-[#74ebd5] to-[#acb6e5] rounded-3xl z-[1000]">
-                    <form className="text-center max-w-xs mx-auto" method="POST" action="/api/auth">
+                    <form className="text-center max-w-xs mx-auto" onSubmit={handleOnSubmit} >
                         <input
                             type="username"
                             name="username"
