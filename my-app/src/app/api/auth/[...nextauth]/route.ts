@@ -11,11 +11,7 @@ const handler = NextAuth({
             name: "Credentials",
             id: 'credentials',
             credentials: {
-                username: {
-                    label: "Username",
-                    type: "text",
-                    placeholder: "test name",
-                },
+                username: {label: "Username",type: "text",placeholder: "test name"},
                 password: { label: "Password", type: "password" },
             },
             async authorize(credentials, req) {
@@ -28,6 +24,7 @@ const handler = NextAuth({
                 } else {
                     const bcrypt = require("bcryptjs")
                     const passwordOk = user && bcrypt.compareSync(password, user.password)
+                    console.log(passwordOk)
                     if (passwordOk) {
                         return user
                     }
