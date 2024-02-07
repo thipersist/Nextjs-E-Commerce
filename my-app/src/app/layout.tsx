@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layouts/Header";
 import { Facebook, Google, Instagram, Xrp, Youtube } from "iconsax-react";
+import AppProvider from "@/components/AppContext";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ['300','500','700'] });
 
@@ -20,28 +21,30 @@ export default function RootLayout({
     <html lang="en">
       <body className={poppins.className}>
         <main className="max-w-6xl mx-auto p-4">
-          <Header />
-          {children}
-          <footer className="border-t p-8 text-center text-gray-500 mt-16 ">
-            <div className="flex gap-3 justify-center my-8">
-              <button className="hover:-translate-y-2 hover:scale-110 duration-300 ">
-                <Facebook size="32" color="#FF8A65"/>
-              </button>
-              <button className="hover:-translate-y-2 hover:scale-110 duration-300 ">
-                <Xrp size="32" color="#FF8A65"/>
-              </button>
-              <button className="hover:-translate-y-2 hover:scale-110 duration-300 ">
-                <Google size="32" color="#FF8A65"/>
-              </button>
-              <button className="hover:-translate-y-2 hover:scale-110 duration-300 ">
-                <Youtube size="32" color="#FF8A65"/>
-              </button>
-              <button className="hover:-translate-y-2 hover:scale-110 duration-300 ">
-                <Instagram size="32" color="#FF8A65"/>
-              </button>
-            </div>
-            &copy; 2024 All rights reserved
+          <AppProvider>
+            <Header />
+            {children}
+            <footer className="border-t p-8 text-center text-gray-500 mt-16 ">
+              <div className="flex gap-3 justify-center my-8">
+                <button className="hover:-translate-y-2 hover:scale-110 duration-300 ">
+                  <Facebook size="32" color="#FF8A65"/>
+                </button>
+                <button className="hover:-translate-y-2 hover:scale-110 duration-300 ">
+                  <Xrp size="32" color="#FF8A65"/>
+                </button>
+                <button className="hover:-translate-y-2 hover:scale-110 duration-300 ">
+                  <Google size="32" color="#FF8A65"/>
+                </button>
+                <button className="hover:-translate-y-2 hover:scale-110 duration-300 ">
+                  <Youtube size="32" color="#FF8A65"/>
+                </button>
+                <button className="hover:-translate-y-2 hover:scale-110 duration-300 ">
+                  <Instagram size="32" color="#FF8A65"/>
+                </button>
+              </div>
+              &copy; 2024 All rights reserved
           </footer>
+          </AppProvider>
         </main>
       </body>
     </html>
