@@ -1,5 +1,5 @@
 "use client";
-import { useSession } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 
 export default function Header() {
@@ -18,7 +18,7 @@ export default function Header() {
                 <Link href={""}>Contact</Link>
             </nav>
             <nav className="flex gap-8 text-gray-500 items-center font-semibold">
-                {status == 'authenticated' && (
+                {status === 'authenticated' && (
                     <button
                         onClick={() => signOut() }
                         className="bg-primary text-white rounded-full px-8 py-2"
@@ -26,7 +26,7 @@ export default function Header() {
                         Logout
                     </button>
                 )}
-                {status !== 'authenticated' && (
+                {status === 'unauthenticated' && (
                     <>
                         <Link href={"/login"}>Login</Link>
                         <Link
